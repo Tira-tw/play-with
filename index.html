@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play with Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      /* 漸變背景 */
+      background-image: url('https://i.makeagif.com/media/4-26-2023/0VRwQ8.gif');
+      /* 替換成你想要的背景圖片 */
+      background-size: cover;
+      /* 確保背景圖片覆蓋整個頁面 */
+      background-attachment: fixed;
+      /* 固定背景圖片 */
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      /* 白色背景，帶有透明度 */
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .profile {
+      margin: 20px;
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      transition: transform 0.3s;
+    }
+
+    .profile:hover {
+      transform: scale(1.05);
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .details {
+      display: none;
+      margin-top: 10px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      opacity: 0;
+      /* 初始隱藏 */
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .details.show {
+      display: block;
+      /* 顯示 */
+      opacity: 1;
+      /* 完全顯示 */
+    }
+
+    button {
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 15px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #4cae4c;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="profile">
+      <img src="https://cdns-images.dzcdn.net/images/cover/783e7518710e6647209c73540400d4f9/0x1900-000000-80-0-0.jpg" alt="頭像">
+      <h1><a href="https://steamcommunity.com/id/twanytwo/">Ru$h</a></h1>
+      <p>Republic of Taiwan</p>
+      <p style="color: red;">[Web Owner]</p>
+      <p>About：<br>Taiwan first Bot Hoster</p>
+      <button onclick="toggleDetails('details1')">Play Games?</button>
+
+      <div class="details" id="details1">
+        <h2>GAME</h2>
+        <p>Team Fortress
+          2[Cheater]<br>Lethal Company[Cheater]<br>Resident Evil Revelations[Cheater]<br>Resident Evil 5[Cheater]<br>Resident Evil 6[Cheater]<br>Garry's Mod[legit]
+        </p>
+      </div>
+    </div>
+
+    <div class="profile">
+      <h1>YOU WANT UPDATE IN YOUR PROFILE?<br>DISCORD TELL ME<3<br>Discord id ross_tira</h1>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGMqQhOCKS2n5M7oguEe58R2cL_PGtakJNLQ&s" alt="頭像">
+      <p>YOU WANT UPDATE IN YOUR PROFILE?<br>DISCORD TELL ME<3<br>Discord id ross_tira</p>
+      <button onclick="toggleDetails('details2')">><</button>
+
+      <div class="details" id="details2">
+        <h2>nope</h2>
+        <p>gay</p>
+      </div>
+    </div>
+
+    <div class="profile">
+      <h1>YOU WANT UPDATE IN YOUR PROFILE?<br>DISCORD TELL ME<3<br>Discord id ross_tira</h1>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGMqQhOCKS2n5M7oguEe58R2cL_PGtakJNLQ&s" alt="頭像">
+      <p>YOU WANT UPDATE IN YOUR PROFILE?<br>DISCORD TELL ME<3<br>Discord id ross_tira</p>
+      <button onclick="toggleDetails('details3')">><</button>
+
+      <div class="details" id="details3">
+        <h2>nope</h2>
+        <p>gay</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.classList.add('show'); // 顯示
+                details.style.display = 'block'; // 先顯示
+                setTimeout(() => { details.style.opacity = '1'; }, 10); // 淡入
+            } else {
+                details.style.opacity = '0'; // 淡出
+                setTimeout(() => { 
+                    details.style.display = 'none'; 
+                    details.classList.remove('show'); // 隱藏
+                }, 500); // 等待淡出完成
+            }
+        }
+  </script>
+
+</body>
+
+</html>
